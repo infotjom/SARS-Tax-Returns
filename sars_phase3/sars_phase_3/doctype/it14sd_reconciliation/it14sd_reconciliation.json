@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:IT14SD-{#####}",
+ "creation": "2026-11-21 13:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "period_section",
+  "company",
+  "fiscal_year",
+  "from_date",
+  "to_date",
+  "status",
+  "lines_section",
+  "lines",
+  "totals_section",
+  "total_return",
+  "total_financial",
+  "totals_col",
+  "total_difference",
+  "review_section",
+  "za_filing",
+  "working_paper",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IT14SD-.YYYY.-.#####",
+   "default": "IT14SD-.YYYY.-.#####",
+   "reqd": 1,
+   "hidden": 0
+  },
+  {
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "label": "Period"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Year of Assessment",
+   "options": "Fiscal Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPrepared\nFiled\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "lines_section",
+   "fieldtype": "Section Break",
+   "label": "Reconciliation Lines"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "IT14SD Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "total_return",
+   "fieldtype": "Currency",
+   "label": "Total Per Return",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_financial",
+   "fieldtype": "Currency",
+   "label": "Total Per Financial Statements",
+   "read_only": 1
+  },
+  {
+   "fieldname": "totals_col",
+   "fieldtype": "Column Break",
+   "label": null
+  },
+  {
+   "fieldname": "total_difference",
+   "fieldtype": "Currency",
+   "label": "Total Difference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Review and Filing"
+  },
+  {
+   "fieldname": "za_filing",
+   "fieldtype": "Link",
+   "label": "ZA Filing",
+   "options": "ZA Filing"
+  },
+  {
+   "fieldname": "working_paper",
+   "fieldtype": "Attach",
+   "label": "Working Paper"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-21 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SARS Phase 3",
+ "name": "IT14SD Reconciliation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "company"
+}
