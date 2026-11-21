@@ -38,6 +38,17 @@ Open **SARS Phase 3** in the Desk workspace, or go to:
 /desk/sars-phase-3
 ```
 
+## Print formats
+
+Standard print formats are included:
+
+- **SA IRP6 Provisional Tax**
+- **SA IT14SD Reconciliation**
+- **SA Dividends Tax Return**
+- **SA Customs VAT Schedule**
+
+Sample PDFs are in [`docs/print_samples`](docs/print_samples). They are rendered from the installed formats against the synthetic test records.
+
 ## Test data
 
 ```bash
