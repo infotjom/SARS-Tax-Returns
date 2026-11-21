@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:IRP6-{#####}",
+ "creation": "2026-11-21 13:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "period_section",
+  "company",
+  "fiscal_year",
+  "period",
+  "period_col",
+  "from_date",
+  "to_date",
+  "due_date",
+  "status",
+  "tax_section",
+  "taxable_income_estimate",
+  "tax_rate",
+  "tax_payable",
+  "tax_col",
+  "provisional_payments",
+  "balance_payable",
+  "payment_reference",
+  "review_section",
+  "za_filing",
+  "working_paper",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IRP6-.YYYY.-.#####",
+   "default": "IRP6-.YYYY.-.#####",
+   "reqd": 1,
+   "hidden": 0
+  },
+  {
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "label": "Period"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Year of Assessment",
+   "options": "Fiscal Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Return Period",
+   "options": "First\nSecond\nThird",
+   "reqd": 1,
+   "default": "First",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period_col",
+   "fieldtype": "Column Break",
+   "label": null
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPrepared\nFiled\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tax_section",
+   "fieldtype": "Section Break",
+   "label": "Taxable Income and Tax"
+  },
+  {
+   "fieldname": "taxable_income_estimate",
+   "fieldtype": "Currency",
+   "label": "Taxable Income Estimate",
+   "reqd": 1,
+   "description": "Annual estimate for the year of assessment."
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Percent",
+   "label": "Tax Rate",
+   "default": "27",
+   "precision": 2,
+   "description": "Default from SARS Tax Returns Settings; override with the applicable rate."
+  },
+  {
+   "fieldname": "tax_payable",
+   "fieldtype": "Currency",
+   "label": "Normal Tax Payable",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_col",
+   "fieldtype": "Column Break",
+   "label": null
+  },
+  {
+   "fieldname": "provisional_payments",
+   "fieldtype": "Currency",
+   "label": "Provisional Payments Already Made",
+   "default": "0"
+  },
+  {
+   "fieldname": "balance_payable",
+   "fieldtype": "Currency",
+   "label": "Balance / (Overpayment)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Review and Filing"
+  },
+  {
+   "fieldname": "za_filing",
+   "fieldtype": "Link",
+   "label": "ZA Filing",
+   "options": "ZA Filing"
+  },
+  {
+   "fieldname": "working_paper",
+   "fieldtype": "Attach",
+   "label": "Working Paper"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-21 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SARS Tax Returns",
+ "name": "IRP6 Provisional Tax",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "company"
+}

@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2026-11-21 12:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "corporate_tax_rate",
+  "dividends_tax_rate",
+  "vat_rate",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "corporate_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Corporate Tax Rate",
+   "default": "27",
+   "precision": 2,
+   "description": "Working-paper default; confirm the applicable rate for the year of assessment."
+  },
+  {
+   "fieldname": "dividends_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Dividends Tax Rate",
+   "default": "20",
+   "precision": 2,
+   "description": "Standard dividends withholding rate; exemptions and treaties remain manual."
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT Rate",
+   "default": "15",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-21 12:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "SARS Tax Returns",
+ "name": "SARS Tax Returns Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "company"
+}

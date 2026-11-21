@@ -1,4 +1,4 @@
-# SARS Phase 3
+# SARS Tax Returns
 
 **IRP6, IT14SD, dividends tax and customs VAT working papers for ERPNext v16.**
 
@@ -26,16 +26,16 @@ Each working paper has a **Prepared** status after submit, an optional link to c
 
 ```bash
 cd ~/frappe-bench
-bench get-app https://github.com/infotjom/SARS-Phase3.git --branch main
-bench --site dev.local install-app sars_phase3
+bench get-app https://github.com/infotjom/SARS-Tax-Returns.git --branch main
+bench --site dev.local install-app sars_tax_returns
 bench --site dev.local migrate
-bench build --app sars_phase3
+bench build --app sars_tax_returns
 ```
 
-Open **SARS Phase 3** in the Desk workspace, or go to:
+Open **SARS Tax Returns** in the Desk workspace, or go to:
 
 ```text
-/desk/sars-phase-3
+/desk/sars-tax-returns
 ```
 
 ## Print formats
@@ -52,7 +52,7 @@ Sample PDFs are in [`docs/print_samples`](docs/print_samples). They are rendered
 ## Test data
 
 ```bash
-bench --site dev.local execute sars_phase3.sars_phase_3.test_data.build
+bench --site dev.local execute sars_tax_returns.sars_tax_returns.test_data.build
 ```
 
 Expected results:
