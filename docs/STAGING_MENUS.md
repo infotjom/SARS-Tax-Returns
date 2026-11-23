@@ -43,3 +43,15 @@ Frappe v16.60 uses the new `Sidebar` model. The old `Workspace Sidebar` records 
 - Public site: `200`
 - All six menus resolve to the expected item counts.
 - No SARS test transactions were created.
+
+## Duplicate LABS cleanup — 23 November 2026
+
+Cause: the v16.60 upgrade retained the archived `Workspace Sidebar` **LABS** alongside the new `Sidebar` **LABS**. Both were visible.
+
+Fixed:
+
+- Deleted the legacy `Workspace Sidebar` **LABS**.
+- Kept the v16.60 `Sidebar` **LABS** (`rgn_lab`).
+- Set `Workspace` **LABS** module to `LABS` so it no longer creates a second module entry.
+- Hid the legacy `Desktop Icon` **LABS** because its `Workspace Sidebar` target no longer exists. The workspace route `/app/labs` remains.
+- Other custom apps may still have legacy Workspace Sidebar rows; clean them the same way if they show duplicate desk entries.
