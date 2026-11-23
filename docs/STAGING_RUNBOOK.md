@@ -155,3 +155,40 @@ bench --site restore-test.local restore <database.sql.gz> \
 6. Record the rollback and notify the business owner.
 
 A v15 → v16 migration is one-way; the backup is the rollback.
+
+---
+
+## Deployment record — 23 November 2026
+
+| Item | Value |
+|---|---|
+| Server | `erpnxtdemo` / `83.147.37.86` |
+| Site | `rom.tjomtek.co.za` |
+| OS | Ubuntu 24.04.4 LTS |
+| Python / Node | 3.14.6 / 24.18.0 |
+| MariaDB | 10.11.14 |
+| Frappe | `v16.60.2` |
+| ERPNext | `v16.60.0` |
+| HRMS | `v16.60.0` |
+| `za_local_core` | 2.0.0 · `6973efe` |
+| `za_local_payroll` | 2.1.0 · `8f902f8` |
+| `sars_tax_returns` | 0.0.1 · `1f4c7f9` |
+| Backup before change | `20261123_110100-rom_tjomtek_co_za` |
+| Health | `https://rom.tjomtek.co.za/login` → 200; `/api/method/ping` → 200 |
+| SARS workspace | Present |
+| `VAT201 Return` records | 0 (clean) |
+
+### What changed
+
+- Upgraded Frappe/ERPNext/HRMS from 16.36/16.37/16.20 to v16.60.
+- Removed `sa_vat_app` completely (app, tables, orphan sidebars).
+- Installed `za_local_core`, `za_local_payroll`, `sars_tax_returns`.
+- Preserved `flight_booking`, `rgn_lab`, `raven`, `wiki`, `weighbridge`, `rgn_timecards`, `offsite_backups`.
+- No SARS test data loaded.
+
+### Still to do on staging
+
+- Smoke-test the unrelated custom apps after the v16.60 upgrade.
+- Configure the staging company (VAT settings, statutory source/rate pack, payroll masters).
+- Execute `STAGING_DEMO_WORKBOOK.md`.
+- Record UAT sign-off.
