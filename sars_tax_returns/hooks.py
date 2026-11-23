@@ -12,15 +12,14 @@ app_home = "/desk/sars-tax-returns"
 required_apps = ["erpnext", "za_local_core"]
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "sars_tax_returns",
-# 		"logo": "/assets/sars_tax_returns/logo.png",
-# 		"title": "SARS Tax Returns",
-# 		"route": "/sars_tax_returns",
-# 		"has_permission": "sars_tax_returns.api.permission.has_app_permission",
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "sars_tax_returns",
+		"logo": "/assets/sars_tax_returns/images/app-tile.svg",
+		"title": "SARS Tax Returns",
+		"route": "/desk/sars-tax-returns",
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to
