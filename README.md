@@ -49,6 +49,14 @@ Standard print formats are included:
 
 Sample PDFs are in [`docs/print_samples`](docs/print_samples). They are rendered from the installed formats against the synthetic test records.
 
+## Documentation
+
+- [Build standard](docs/BUILD_STANDARD.md)
+- [Staging user manual](docs/STAGING_USER_MANUAL.md)
+- [Staging technical manual](docs/STAGING_TECHNICAL_MANUAL.md)
+- [Demo & test workbook](docs/STAGING_DEMO_WORKBOOK.md)
+- [Print samples](docs/print_samples/)
+
 ## Test data
 
 ```bash
